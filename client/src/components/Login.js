@@ -29,7 +29,7 @@ const Login = (props) => {
           required
           placeholder="Type your email here."
           name="email"
-          value="email"
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <label>Password: </label>
@@ -38,7 +38,7 @@ const Login = (props) => {
           required
           placeholder="Type your password here."
           name="password"
-          value="password"
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Submit</button>
