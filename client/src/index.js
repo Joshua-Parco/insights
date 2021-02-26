@@ -4,13 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initMiddleware, } from 'devise-axios';
+import { BrowserRouter } from 'react-router-dom';
+import AuthProvider from './providers/AuthProvider';
 
 initMiddleware();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <AuthProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter> 
+  </AuthProvider>, 
   document.getElementById('root')
 );
 
