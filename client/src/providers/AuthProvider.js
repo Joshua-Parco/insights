@@ -41,12 +41,12 @@ const AuthProvider = (props) => {
     }
   }
 
-  const handleLogout = async (user, history) => {
+  const handleLogout = async (history) => {
     try {
-      resetProvider();
+      setAuthErrors([]);
       let res = await axios.delete("/api/auth/sign_out");
       setUser(null);
-      history.push("/");
+      history.push("/login");
     } catch (error) {
       setAuthErrors(error.response.data);
     } finally {
