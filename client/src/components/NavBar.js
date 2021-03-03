@@ -17,8 +17,8 @@ const NavBar = (props) => {
     } else {
       return (
         <div>
-          <Link to "/login">Log in</Link>
-          <Link to "/register">Register</Link>
+          <Link to="/login">Log in</Link>
+          <Link to="/register">Register</Link>
         </div>
       )
     }
@@ -26,8 +26,8 @@ const NavBar = (props) => {
 
   return (
     <div>
-      <Link to "/">Home</Link>
-      {rightNavItems}
+      <Link to="/">Home</Link>
+      {rightNavItems()}
     </div>
   )
 }
